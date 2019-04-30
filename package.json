@@ -1,0 +1,72 @@
+{
+  "name": "ragent-pool",
+  "version": "1.0.0",
+  "description": "Request agent pool for concurrency management",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "setup": "npm install",
+    "build": "tsc",
+    "lint": "node_modules/.bin/eslint --ignore-path .gitignore ./src/**/*.ts -f json -o ./reports/lint/eslint.json",
+    "test:dist": "node_modules/.bin/jest --testMatch=**/dist/__tests__/*.test.js --testResultsProcessor=",
+    "test": "node_modules/.bin/jest --testResultsProcessor=",
+    "test:src:coverage": "node_modules/.bin/jest --coverage",
+    "typedoc": "typedoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryderbrooks/ragent-pool.git"
+  },
+  "homepage": "https://github.com/ryderbrooks/ragent-pool#readme",
+  "bugs": {
+    "url": "https://github.com/ryderbrooks/ragent-pool/issues"
+  },
+  "files": [
+    "dist/lib/**.js",
+    "dist/lib/*.d.ts",
+    "dist/meta/*.d.ts",
+    "dist/__tests__/*.js",
+    "dist/index.js",
+    "dist/index.d.ts"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@ragent/cross-types": "^3.0.0",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.8",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "@typescript-eslint/typescript-estree": "^1.7.0",
+    "eslint": "^5.15.3",
+    "eslint-plugin-jest": "^22.5.1",
+    "jest": "^24.7.1",
+    "jest-sonar-reporter": "^2.0.0",
+    "ts-jest": "^24.0.2",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "@ryder_brooks/event-emitter-async": "0.0.7",
+    "async-concurrency-pool": "^0.1.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "verbose": true,
+    "testEnvironment": "node",
+    "testResultsProcessor": "jest-sonar-reporter",
+    "coverageDirectory": "reports/coverage",
+    "testMatch": [
+      "**/src/__tests__/*.test.ts"
+    ]
+  },
+  "jestSonar": {
+    "reportPath": "reports/coverage",
+    "reportFile": "test-reporter.xml",
+    "indent": 4
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

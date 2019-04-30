@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "diagnostics": true,
+    "extendedDiagnostics": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "declarationMap": true,
+    "rootDir": "./src",
+    "declaration": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@ragent"
+    ],
+    "lib": [
+      "esnext"
+    ]
+  },
+  "compileOnSave": true,
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "docs"
+  ],
+  "typedocOptions": {
+    "mode": "file",
+    "out": "docs",
+    "ignoreCompilerErrors": false,
+    "module": "commonjs",
+    "target": "ES6",
+    "verbose": true,
+    "excludeNotExported": false,
+    "excludeExternals": false,
+    "includeDeclarations": true,
+    "excludePrivate": true,
+    "externalPattern": "**/node_modules/@ragent/**",
+    "exclude": [
+      "**/node_modules/!(@ragent|!@types)/!(node)/**"
+    ],
+    "name": "ragent-pool",
+    "theme": "default"
+  }
+}
