@@ -1,6 +1,6 @@
 {
   "name": "ragent-pool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Request agent pool for concurrency management",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
